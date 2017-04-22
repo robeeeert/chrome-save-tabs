@@ -1,7 +1,7 @@
 (function () {
   const savePlaintextButton = document.getElementById('save-plaintext')
   const saveJsonButton = document.getElementById('save-json')
-  const allWindowsCheckbox = document.getElementById('save-all-windows')
+  const saveAllWindowsCheckbox = document.getElementById('save-all-windows')
 
   /**
    * Since the proper way does not work (requestQuota always grants 0 bytes),
@@ -27,7 +27,7 @@
    */
   function handleSaveClick (cb) {
     const query = {}
-    if (!allWindowsCheckbox.checked) {
+    if (!saveAllWindowsCheckbox.checked) {
       query.windowId = chrome.windows.WINDOW_ID_CURRENT
     }
     chrome.tabs.query(query, cb)
@@ -58,4 +58,12 @@
       download(JSON.stringify(json), 'application/json', 'json')
     })
   }
+
+  // Load options
+  const defaultOptions = {
+    saveAllWindows: false
+  }
+  chrome.storage.sync.get(defaultOptions, options => {
+    saveAllWindowsCheckbox.checked = options.saveAllWindows
+  })
 })()

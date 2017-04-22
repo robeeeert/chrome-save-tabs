@@ -33,20 +33,27 @@ function handleSaveClick (cb) {
 }
 
 savePlaintextButton.onclick = () => {
-   handleSaveClick(tabs => {
+  const header = `Tab list created by Save Tabs on ${new Date()}\r\n`
+  handleSaveClick(tabs => {
     const text = tabs.reduce((text, currentTab) => {
       return `${text}\r\n${currentTab.url}`
-    }, '')
+    }, header || '')
     download(text, 'text/plain', 'txt')
   })
 }
 
 saveJsonButton.onclick = () => {
-   handleSaveClick(tabs => {
-    const json = tabs.reduce((json, currentTab) => {
+  const json = {
+    date: `${new Date()}`,
+    comment: 'Created by Save Tabs'
+  }
+  handleSaveClick(tabs => {
+    const jsonTabs = tabs.reduce((json, currentTab) => {
       json[currentTab.title] = currentTab.url
       return json
     }, {})
+
+    json.tabs = jsonTabs
     download(JSON.stringify(json), 'application/json', 'json')
   })
 }

@@ -1,0 +1,27 @@
+{
+  "name": "chrome-extension-save-tabs",
+  "version": "1.0.0",
+  "description": "A chrome extension that allows saving all opened tabs to json or plain text",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/robeeeert/chrome-save-tabs.git"
+  },
+  "keywords": [
+    "chrome",
+    "extension",
+    "save",
+    "tabs",
+    "url",
+    "json"
+  ],
+  "author": "Roberto Ciano",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/robeeeert/chrome-save-tabs/issues"
+  },
+  "homepage": "https://github.com/robeeeert/chrome-save-tabs#readme"
+}

@@ -14,6 +14,11 @@ Save Tabs is a chrome extension that allows saving all opened tabs to json or pl
 
 So, as you see it has a pretty strong focus on privacy. I think this is enough arguments.
 
+## Installation
+
+Download the zipped version of this repo and unzip it, or clone it to your local machine.
+Then, follow these instructions: https://developer.chrome.com/extensions/getstarted#unpacked (It's only a few simple steps)
+
 ## Now what?
 
 Please share your suggestions or bugs. And if you have an eye for design, feel free.... :) I'd really appreciate it!

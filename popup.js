@@ -2,11 +2,16 @@
   const savePlaintextButton = document.getElementById('save-plaintext')
   const saveJsonButton = document.getElementById('save-json')
   const saveAllWindowsCheckbox = document.getElementById('save-all-windows')
+  const openInNewWindowCheckbox = document.getElementById('open-in-new-window')
 
   /**
+   * Download a file with given content, mime type and extension.
    * Since the proper way does not work (requestQuota always grants 0 bytes),
    * this copy-pasted workaround from http://stackoverflow.com/a/18197341/2452585
    * does the trick
+   * @param content {String} The content of the file
+   * @param type {String} The complete mime type of the file, e.g. 'text/plain' or 'application/json'
+   * @param ext {String} The extension part of the file name
    */
   function download(content, type, ext) {
     const filename = `tablist.${ext}`
@@ -20,6 +25,22 @@
     element.click();
 
     document.body.removeChild(element);
+  }
+
+  /**
+   * Open a new window with the specified content
+   */
+  function open (content) {
+    const win = window.open()
+    win.document.write(content)
+  }
+
+  function save (content, type, ext) {
+    if (openInNewWindowCheckbox.checked) {
+      open(content, type)
+    } else {
+      download(content, type, ext)
+    }
   }
 
   /**
@@ -39,7 +60,7 @@
       const text = tabs.reduce((text, currentTab) => {
         return `${text}\r\n${currentTab.url}`
       }, header || '')
-      download(text, 'text/plain', 'txt')
+      save(text, 'text/plain', 'txt')
     })
   }
 
@@ -55,15 +76,17 @@
       }, {})
 
       json.tabs = jsonTabs
-      download(JSON.stringify(json), 'application/json', 'json')
+      save(JSON.stringify(json), 'application/json', 'json')
     })
   }
 
   // Load options
   const defaultOptions = {
-    saveAllWindows: false
+    saveAllWindows: false,
+    openInNewWindow: false
   }
   chrome.storage.sync.get(defaultOptions, options => {
-    saveAllWindowsCheckbox.checked = options.saveAllWindows
+    saveAllWindowsCheckbox.checked = options.saveAllWindows,
+    openInNewWindowCheckbox.checked = options.openInNewWindow
   })
 })()

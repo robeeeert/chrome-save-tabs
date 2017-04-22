@@ -10,7 +10,7 @@ Save Tabs is a chrome extension that allows saving all opened tabs to json or pl
 - It does not communicate with a server
 - It works completely offline
 - You can decide on the format of the files (plain text or JSON)
-- You can choose between saving the list to a file or smply opening it in the specified format in a new tab
+- You can choose between saving the list to a file or simply opening it in the specified format in a new tab
 
 So, as you see it has a pretty strong focus on privacy. I think this is enough arguments.
 

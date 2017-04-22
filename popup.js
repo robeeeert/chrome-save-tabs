@@ -75,7 +75,7 @@
         if (json[key]) {
           let i = 1
           do {
-            key = json[`${currentTab.title} -- ${i}`]
+            key = `${currentTab.title} -- ${i}`
             i++
           } while (json[key])
         }

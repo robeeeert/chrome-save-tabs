@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <style>
+      html,
+      body {
+        padding: 0;
+        margin: 0;
+        width: 400px;
+      }
+      h1 {
+        font-size: 1em;
+        color: #234e3f;
+        margin: 0;
+        padding: 0;
+        margin-bottom: 10px;
+        text-decoration: none;
+        font-weight: bold;
+        text-align: center;
+      }
+      ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+      }
+        ul > li {
+          margin: 0;
+          padding: 0;
+        }
+          ul > li > button {
+            width: 100%;
+            background: #234e3f;
+            border: 2px solid white;
+            padding: 3px;
+            color: white;
+            margin: 0;
+            outline: none;
+            cursor: pointer;
+          }
+    </style>
+  </head>
+  <body>
+    <content>
+      <h1>Save opened tabs</h1>
+      <ul>
+        <li><button id="save-plaintext">Save tabs as plain text</button></li>
+      </ul>
+      <label><input type="checkbox" id="save-all-windows"/> Save all opened windows</label>
+      <script src="popup.js"></script>
+    </content>
+  </body>
+</html>

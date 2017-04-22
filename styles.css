@@ -2,24 +2,19 @@ html,
 body {
   padding: 0;
   margin: 0;
-  width: 400px;
-  background-color: darkseagreen;
 }
 
 h1 {
   font-size: 1em;
-  color: #234e3f;
   margin: 20px 0;
   padding: 0;
   text-decoration: none;
   font-weight: bold;
-  text-align: center;
 }
 
 ul {
   margin: 0;
   padding: 0;
-  margin-bottom: 35px;
   list-style: none;
 }
   ul > li {
@@ -27,16 +22,6 @@ ul {
     padding: 0;
     margin-bottom: 1px;
   }
-    ul > li > button {
-      width: 100%;
-      background: #234e3f;
-      border: 2px solid #1a3a2e;
-      padding: 10px;
-      color: white;
-      margin: 0;
-      outline: none;
-      cursor: pointer;
-    }
 
 input[type="checkbox"] {
   vertical-align: middle;

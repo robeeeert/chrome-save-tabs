@@ -16,7 +16,10 @@
    version="1.1"
    id="svg8"
    inkscape:version="0.92.1 r"
-   sodipodi:docname="logo.svg">
+   sodipodi:docname="logo.svg"
+   inkscape:export-filename="/home/rob/devel/js/chrome-extension-save-tabs/logo.png"
+   inkscape:export-xdpi="24.200455"
+   inkscape:export-ydpi="24.200455">
   <defs
      id="defs2">
     <linearGradient
@@ -49,9 +52,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.27016495"
-     inkscape:cx="1068.2312"
-     inkscape:cy="467.35486"
+     inkscape:zoom="1.5282837"
+     inkscape:cx="322.38277"
+     inkscape:cy="256.74231"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -96,11 +99,11 @@
        id="rect4496"
        inkscape:connector-curvature="0" />
     <path
-       style="fill:none;stroke:#ffffff;stroke-width:7.06500006;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       d="M 31.681777,105.69745 H 47.392823 L 63.10387,92.193738 h 31.422092 31.422098 l 15.71104,13.503712 h 15.71105"
+       style="fill:none;stroke:#ffffff;stroke-width:13.26500034;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="M 42.711017,107.75658 59.982625,92.91157 h 34.543217 34.543218 l 17.27162,14.84501"
        id="path4487"
        inkscape:connector-curvature="0"
-       sodipodi:nodetypes="ccccccc" />
+       sodipodi:nodetypes="ccccc" />
     <path
        style="opacity:1;fill:#3eff12;fill-opacity:1;stroke:none;stroke-width:3.36500001;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:normal"
        d="m 78.538503,112.9686 v 40.40969 H 60.214279 l 17.155845,29.71452 17.155842,29.71532 17.155844,-29.71532 17.15583,-29.71452 H 110.51342 V 112.9686 Z"

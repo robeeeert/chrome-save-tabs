@@ -16,11 +16,8 @@
   }
 
   function restore () {
-    const defaultOptions = {
-      saveAllWindows: false,
-      openInNewWindow: false
-    }
-    chrome.storage.sync.get(defaultOptions, options => {
+    chrome.storage.sync.get(DEFAULT_OPTIONS, options => {
+      filenameInput.value = options.filename
       saveAllWindowsCheckbox.checked = options.saveAllWindows,
       openInNewWindowCheckbox.checked = options.openInNewWindow
     })

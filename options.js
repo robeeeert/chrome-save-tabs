@@ -1,11 +1,13 @@
 (function () {
   const saveButton = document.getElementById('savebutton')
+  const filenameInput = document.getElementById('filename')
   const saveAllWindowsCheckbox = document.getElementById('save-all-windows')
   const openInNewWindowCheckbox = document.getElementById('open-in-new-window')
   const infoOptionsSaved = document.getElementById('infooptionssaved')
 
   function save () {
     const options = {
+      filename: filenameInput.value,
       saveAllWindows: saveAllWindowsCheckbox.checked,
       openInNewWindow: openInNewWindowCheckbox.checked
     }

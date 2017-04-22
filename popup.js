@@ -3,6 +3,7 @@
   const saveJsonButton = document.getElementById('save-json')
   const saveAllWindowsCheckbox = document.getElementById('save-all-windows')
   const openInNewWindowCheckbox = document.getElementById('open-in-new-window')
+  var filename
 
   /**
    * Download a file with given content, mime type and extension.
@@ -14,10 +15,9 @@
    * @param ext {String} The extension part of the file name
    */
   function download(content, type, ext) {
-    const filename = `tablist.${ext}`
     const element = document.createElement('a');
     element.setAttribute('href', `data:${type};charset=utf-8,${encodeURIComponent(content)}`);
-    element.setAttribute('download', filename);
+    element.setAttribute('download', `${filename}.${ext}`);
 
     element.style.display = 'none';
     document.body.appendChild(element);
@@ -81,11 +81,8 @@
   }
 
   // Load options
-  const defaultOptions = {
-    saveAllWindows: false,
-    openInNewWindow: false
-  }
-  chrome.storage.sync.get(defaultOptions, options => {
+  chrome.storage.sync.get(DEFAULT_OPTIONS, options => {
+    filename = options.filename
     saveAllWindowsCheckbox.checked = options.saveAllWindows,
     openInNewWindowCheckbox.checked = options.openInNewWindow
   })

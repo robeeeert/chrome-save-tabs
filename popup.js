@@ -9,7 +9,7 @@ const allWindowsCheckbox = document.getElementById('save-all-windows')
  */
 function download(content, type, ext) {
   const filename = `tablist.${ext}`
-  var element = document.createElement('a');
+  const element = document.createElement('a');
   element.setAttribute('href', `data:${type};charset=utf-8,${encodeURIComponent(content)}`);
   element.setAttribute('download', filename);
 

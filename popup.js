@@ -21,6 +21,9 @@ function download(content, type, ext) {
   document.body.removeChild(element);
 }
 
+/**
+ * Makes sure the right tabs are selected based on the chosen settings
+ */
 function handleSaveClick (cb) {
   const query = {}
   if (!allWindowsCheckbox.checked) {

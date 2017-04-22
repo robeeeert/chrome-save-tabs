@@ -9,7 +9,9 @@
     "default_icon": "logo.png",
     "default_popup": "popup.html"
   },
+  "options_page": "options.html",
   "permissions": [
-    "tabs"
+    "tabs",
+    "storage"
   ]
 }

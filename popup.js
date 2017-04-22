@@ -71,7 +71,15 @@
     }
     handleSaveClick(tabs => {
       const jsonTabs = tabs.reduce((json, currentTab) => {
-        json[currentTab.title] = currentTab.url
+        let key = currentTab.title
+        if (json[key]) {
+          let i = 1
+          do {
+            key = json[`${currentTab.title} -- ${i}`]
+            i++
+          } while (json[key])
+        }
+        json[key] = currentTab.url
         return json
       }, {})
 
